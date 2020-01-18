@@ -48,13 +48,24 @@ import HelloWorld from './components/HelloWorld'
 
 export default {
   name: 'App',
-
   components: {
     HelloWorld
   },
-
   data: () => ({
     //
-  })
+  }),
+  methods: {
+    fetchData () {
+      const url = 'https://newsapi.org/v2/top-headlines?' + 'country=us&' + 'apiKey=892ade7a95c3416db5b38451fffd25d2'
+      const req = new Request(url)
+      fetch(req)
+        .then((response) => {
+          console.log(response.json())
+        })
+    }
+  },
+  mounted () {
+    this.fetchData()
+  }
 }
 </script>
