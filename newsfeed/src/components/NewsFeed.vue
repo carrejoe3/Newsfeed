@@ -6,7 +6,7 @@
       <v-divider class="mx-4"></v-divider>
       <v-card-text>
         <div class="my-4 subtitle-1">{{ article.description }}</div>
-        <div>{{ article.publishedAt | formatDateTime }}</div>
+        <div>{{ article.source.name }} - {{ article.publishedAt | formatDateTime }}</div>
       </v-card-text>
     </v-card>
   </v-container>
