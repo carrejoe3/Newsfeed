@@ -1,18 +1,13 @@
 <template>
   <v-container>
-    <v-card class="mx-auto my-12" v-for="(article, index) in articles" :key="index">
+    <v-card class="mx-auto my-12" v-for="(article, index) in articles" :key="index" :href="article.url" target="_blank" ripple>
       <v-img :src="article.urlToImage"></v-img>
       <v-card-title id="title">{{ article.title }}</v-card-title>
       <v-divider class="mx-4"></v-divider>
       <v-card-text>
-        <div class="my-4 subtitle-1 black--text">{{ article.publishedAt | formatDateTime }}</div>
-        <div>{{ article.description }}</div>
+        <div class="my-4 subtitle-1">{{ article.description }}</div>
+        <div>{{ article.publishedAt | formatDateTime }}</div>
       </v-card-text>
-      <v-card-actions>
-        <a :href="article.url" target="_blank">
-          <v-btn color="primary accent-4" text>Read</v-btn>
-        </a>
-      </v-card-actions>
     </v-card>
   </v-container>
 </template>
