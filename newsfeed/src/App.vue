@@ -1,6 +1,10 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>Newsfeed</v-app-bar>
+    <v-app-bar app color="primary" dark>
+      <v-toolbar-title>Newsfeed</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-icon>mdi-heart</v-icon>
+    </v-app-bar>
     <v-content>
       <router-view></router-view>
     </v-content>
