@@ -11,9 +11,5 @@ export default new Vuex.Store({
     updateArticles (state, articles) {
       state.articles = articles
     }
-  },
-  actions: {
-  },
-  modules: {
   }
 })

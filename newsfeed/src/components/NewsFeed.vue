@@ -15,7 +15,6 @@
 <script>
 export default {
   name: 'NewsFeed',
-  data: () => ({}),
   computed: {
     articles () {
       return this.$store.state.articles

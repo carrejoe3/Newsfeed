@@ -16,6 +16,7 @@
 export default {
   name: 'App',
   methods: {
+    // Get articles and push them to vuex store
     fetchData () {
       const url = 'https://newsapi.org/v2/top-headlines?' + 'country=gb&' + 'apiKey=892ade7a95c3416db5b38451fffd25d2'
       const req = new Request(url)

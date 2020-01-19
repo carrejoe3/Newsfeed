@@ -7,6 +7,7 @@ import moment from 'moment'
 
 Vue.config.productionTip = false
 
+// Filter that takes a ISO date as an argument and returns it in a readable format
 Vue.filter('formatDateTime', (date) => {
   return moment.utc(date).local().format('dddd, MMMM Do YYYY, h:mm:ss a')
 })
