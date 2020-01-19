@@ -17,7 +17,10 @@ export default {
       const req = new Request(url)
       fetch(req)
         .then((response) => {
-          console.log(response.json())
+          return response.json()
+        })
+        .then((json) => {
+          this.$store.commit('updateArticles', json.articles)
         })
     }
   },
