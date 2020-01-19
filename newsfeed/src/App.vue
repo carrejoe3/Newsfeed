@@ -3,7 +3,7 @@
     <v-app-bar app color="primary" dark>
       <v-toolbar-title>Newsfeed</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-icon>mdi-heart</v-icon>
+      <v-icon>mdi-newspaper</v-icon>
     </v-app-bar>
     <v-content>
       <router-view></router-view>
@@ -17,7 +17,7 @@ export default {
   name: 'App',
   methods: {
     fetchData () {
-      const url = 'https://newsapi.org/v2/top-headlines?' + 'country=us&' + 'apiKey=892ade7a95c3416db5b38451fffd25d2'
+      const url = 'https://newsapi.org/v2/top-headlines?' + 'country=gb&' + 'apiKey=892ade7a95c3416db5b38451fffd25d2'
       const req = new Request(url)
       fetch(req)
         .then((response) => {
